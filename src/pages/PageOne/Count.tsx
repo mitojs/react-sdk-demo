@@ -1,6 +1,7 @@
-import { Button } from 'antd'
+import { Button, Card, Col, Row } from 'antd'
 import React, { useState } from 'react'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
+import styled from 'styled-components'
 
 const useCount = () => {
   const [count, setCount] = useState<number>(0)
@@ -12,12 +13,24 @@ const useCount = () => {
   }
   return { count, add, sub }
 }
+const SpanWrapper = styled.span`
+  font-size: 26px;
+`
 export default function Count() {
   const { count, add, sub } = useCount()
   return (
-    <div>
-      <Button onClick={add} icon={<PlusOutlined />}></Button>
-      <Button onClick={sub} icon={<MinusOutlined />}></Button>
-    </div>
+    <Card>
+      <Row gutter={[0, 10]}>
+        <Col span={24}>
+          <SpanWrapper>Count:{count}</SpanWrapper>
+        </Col>
+        <Button style={{ marginRight: '10px' }} onClick={add} icon={<PlusOutlined />}>
+          加
+        </Button>
+        <Button onClick={sub} icon={<MinusOutlined />}>
+          减
+        </Button>
+      </Row>
+    </Card>
   )
 }
