@@ -1,4 +1,4 @@
-import PageOne from '../pages/PageOne'
+import PageOne from '../pages/PageOne/PageOne'
 import PageTwo from '../pages/PageTwo'
 
 const routes = [
