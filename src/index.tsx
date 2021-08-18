@@ -4,6 +4,9 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+const { worker } = require('./mocks/browser')
+worker.start()
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

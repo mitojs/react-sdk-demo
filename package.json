@@ -1,6 +1,6 @@
 {
   "name": "react-sdk-demo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@mitojs/web": "^2.1.19",
@@ -47,6 +47,10 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.8",
-    "@types/styled-components": "^5.1.12"
+    "@types/styled-components": "^5.1.12",
+    "msw": "^0.34.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
