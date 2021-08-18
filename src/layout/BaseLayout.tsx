@@ -1,10 +1,8 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import { Layout } from 'antd'
 import SiderMenu from './SiderMenu'
 import BaseHeader from './BaseHeader'
 import routes from '../router/routes'
-import PageOne from '../pages/PageOne'
-import PageTwo from '../pages/PageTwo'
 
 const { Content } = Layout
 const BaseLayout = () => {
@@ -14,14 +12,12 @@ const BaseLayout = () => {
       <Layout>
         <BaseHeader />
         <Content>
-          <BrowserRouter>
-            <Switch>
-              {/* {routes.map(item => ( */}
-              <Route key='/page-one' path='/page-one' exact={true} component={PageOne}></Route>
-              <Route key='/page-two' path='/page-two' exact={true} component={PageTwo}></Route>
-              {/* // ))} */}
-            </Switch>
-          </BrowserRouter>
+          <Switch>
+            {routes.map(item => (
+              <Route key={item.path} path={item.path} component={item.component}></Route>
+            ))}
+            <Redirect to={{ pathname: routes[0].path }}></Redirect>
+          </Switch>
         </Content>
       </Layout>
     </Layout>

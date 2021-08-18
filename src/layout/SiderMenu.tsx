@@ -19,15 +19,9 @@ export default function SiderMenu() {
   useEffect(() => {
     if (routes.some(item => item.path === location.pathname)) {
       setCurMenu(location.pathname)
-    } else {
-      const path = routes[0].path
-      setCurMenu(path)
-      push(path)
     }
-    // eslint-disable-next-line
-  }, [])
+  }, [location])
   const handleClick = (value: { key: string }) => {
-    console.log('value.key', value.key)
     push(value.key)
     setCurMenu(value.key)
   }
