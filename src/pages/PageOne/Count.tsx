@@ -19,7 +19,7 @@ const SpanWrapper = styled.span`
 export default function Count() {
   const { count, add, sub } = useCount()
   return (
-    <Card>
+    <Card style={{ marginBottom: '10px' }}>
       <Row gutter={[0, 10]}>
         <Col span={24}>
           <SpanWrapper>Count:{count}</SpanWrapper>

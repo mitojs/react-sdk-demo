@@ -12,7 +12,7 @@ const BaseLayout = () => {
       <Layout>
         <BaseHeader />
         <Content style={{ padding: '10px' }}>
-          <Alert message='提示信息' description='右边页面会实时打印的你操作行为，控制台会打印当前收集的信息' type='info' showIcon />
+          <Alert message='提示信息' description='右侧的Breadcrumb组件会实时打印的你操作行为。控制台会打印当前收集的信息' type='info' showIcon />
           <Row style={{ padding: '10px 0' }} gutter={[10, 10]}>
             <Col span={12}>
               <Switch>

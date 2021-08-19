@@ -1,7 +1,7 @@
 import './App.css'
 import BaseLayout from './layout/BaseLayout'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import * as MITO from './web'
+import * as MITO from '@mitojs/web'
 MITO.init({
   apikey: 'abc-123',
   dsn: '/upload',

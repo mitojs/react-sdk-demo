@@ -1,5 +1,6 @@
 import { Button, Card, Col, message, Row } from 'antd'
-
+import { useHistory } from 'react-router-dom'
+import { log } from '@mitojs/web'
 enum RequestTypes {
   Xhr = 'Xhr',
   Fetch = 'Fetch',
@@ -12,6 +13,7 @@ const printMessage = (status: number, responseText: string, requestType: Request
   }
 }
 export default function BtnContainer() {
+  const history = useHistory()
   const onClickNormalXhr = () => {
     const xhr = new XMLHttpRequest()
     xhr.open('get', '/normal')
@@ -68,6 +70,20 @@ export default function BtnContainer() {
     })
     await promise
   }
+  const onClickTriggerCodeError = () => {
+    const obj = {} as any
+    // create code error
+    obj.noObj.noField = 'no field'
+  }
+  const onClickPushRoute = () => {
+    history.push('/page-two')
+  }
+  const onClickMitoLog = () => {
+    log({
+      message: 'this is message',
+      tag: 'this is tag',
+    })
+  }
   return (
     <Card>
       <Row gutter={[10, 10]}>
@@ -87,10 +103,13 @@ export default function BtnContainer() {
           <Button onClick={onClickTriggerUnhandledrejection}>触发Promise错误</Button>
         </Col>
         <Col>
-          <Button onClick={onClickNormalXhr}>触发代码错误</Button>
+          <Button onClick={onClickTriggerCodeError}>触发代码错误</Button>
         </Col>
         <Col>
-          <Button onClick={onClickNormalXhr}>路由跳转</Button>
+          <Button onClick={onClickMitoLog}>手动上报MITO.log</Button>
+        </Col>
+        <Col>
+          <Button onClick={onClickPushRoute}>路由跳转</Button>
         </Col>
       </Row>
     </Card>
