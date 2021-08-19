@@ -5,15 +5,16 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 
 const { worker } = require('./mocks/browser')
-worker.start()
-// if (process.env.NODE_ENV === 'production') {
-//   process.env = {
-//     ...process.env,
-//     PUBLIC_URL: 'react-sdk-demo',
-//   }
-// } else {
-//   // process.env.PUBLIC_URL = ''
-// }
+
+if (process.env.NODE_ENV === 'production') {
+  worker.start({
+    serviceWorker: {
+      url: '/react-sdk-demo/mockServiceWorker.js',
+    },
+  })
+} else {
+  worker.start()
+}
 
 ReactDOM.render(
   <React.StrictMode>
