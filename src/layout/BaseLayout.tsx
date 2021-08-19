@@ -3,7 +3,6 @@ import { Alert, Col, Layout, Row } from 'antd'
 import SiderMenu from './SiderMenu'
 import BaseHeader from './BaseHeader'
 import routes from '../router/routes'
-import styled from 'styled-components'
 
 const { Content } = Layout
 const BaseLayout = () => {

@@ -13,18 +13,18 @@ export const handlers = [
     return res(
       ctx.status(500),
       ctx.json({
-        data: 'Abnormal Post Request',
+        data: 'Abnormal Get Request',
       })
     )
   }),
-  // rest.post('/normal', (req, res, ctx) => {
-  //   return res(
-  //     ctx.status(200),
-  //     ctx.json({
-  //       data: 'Normal Post Request',
-  //     })
-  //   )
-  // }),
+  rest.post('/upload', (_, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        data: 'ok',
+      })
+    )
+  }),
   // rest.post('/abnormal', (req, res, ctx) => {
   //   return res(
   //     ctx.status(500),
