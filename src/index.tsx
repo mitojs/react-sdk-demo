@@ -6,6 +6,14 @@ import reportWebVitals from './reportWebVitals'
 
 const { worker } = require('./mocks/browser')
 worker.start()
+// if (process.env.NODE_ENV === 'production') {
+//   process.env = {
+//     ...process.env,
+//     PUBLIC_URL: 'react-sdk-demo',
+//   }
+// } else {
+//   // process.env.PUBLIC_URL = ''
+// }
 
 ReactDOM.render(
   <React.StrictMode>
