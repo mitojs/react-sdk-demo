@@ -1,6 +1,6 @@
 import './App.css'
 import BaseLayout from './layout/BaseLayout'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 import * as MITO from '@mitojs/web'
 MITO.init({
   apikey: 'abc-123',
@@ -11,11 +11,11 @@ MITO.init({
 })
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Switch>
         <Route path='/' component={BaseLayout}></Route>
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
