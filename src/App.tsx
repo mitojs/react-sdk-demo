@@ -8,6 +8,8 @@ MITO.init({
   maxBreadcrumbs: 100,
   debug: true,
   silentConsole: true,
+  enableTraceId: true,
+  includeHttpUrlTraceIdRegExp: /.*/,
 })
 function App() {
   return (
