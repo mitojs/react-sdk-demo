@@ -1,6 +1,6 @@
 import { Button, Card, Col, message, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
-import { log } from '@mitojs/web'
+import { useState } from 'react'
 enum RequestTypes {
   Xhr = 'Xhr',
   Fetch = 'Fetch',
@@ -14,6 +14,7 @@ const printMessage = (status: number, responseText: string, requestType: Request
 }
 export default function BtnContainer() {
   const history = useHistory()
+  const [isRenderError, setIsRenderError] = useState(false)
   const onClickNormalXhr = () => {
     const xhr = new XMLHttpRequest()
     xhr.open('get', '/normal')
@@ -79,39 +80,49 @@ export default function BtnContainer() {
     history.push('/page-two')
   }
   const onClickMitoLog = () => {
-    log({
-      message: 'this is message',
-      tag: 'this is tag',
-    })
+    // log({
+    //   message: 'this is message',
+    //   tag: 'this is tag',
+    // })
   }
-  return (
-    <Card>
-      <Row gutter={[10, 10]}>
-        <Col>
-          <Button onClick={onClickNormalXhr}>触发正常Xhr</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickAbnormalXhr}>触发异常Xhr</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickNormalFetch}>触发正常Fetch</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickAbnormalFetch}>触发异常Fetch</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickTriggerUnhandledrejection}>触发Promise错误</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickTriggerCodeError}>触发代码错误</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickMitoLog}>手动上报MITO.log</Button>
-        </Col>
-        <Col>
-          <Button onClick={onClickPushRoute}>路由跳转</Button>
-        </Col>
-      </Row>
-    </Card>
-  )
+  const onClickRenderError = () => {
+    setIsRenderError(true)
+  }
+  if (isRenderError) {
+    throw new Error('is Render error')
+  } else {
+    return (
+      <Card>
+        <Row gutter={[10, 10]}>
+          <Col>
+            <Button onClick={onClickNormalXhr}>触发正常Xhr</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickAbnormalXhr}>触发异常Xhr</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickNormalFetch}>触发正常Fetch</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickAbnormalFetch}>触发异常Fetch</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickTriggerUnhandledrejection}>触发Promise错误</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickTriggerCodeError}>触发代码错误</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickMitoLog}>手动上报MITO.log</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickRenderError}>触发render错误</Button>
+          </Col>
+          <Col>
+            <Button onClick={onClickPushRoute}>路由跳转</Button>
+          </Col>
+        </Row>
+      </Card>
+    )
+  }
 }

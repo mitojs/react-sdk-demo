@@ -2,7 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 const { worker } = require('./mocks/browser')
-
+import { init, MitoProvider } from '@mitojs/react'
+import { BrowserClient } from '@mitojs/browser'
 if (process.env.NODE_ENV === 'production') {
   worker.start({
     serviceWorker: {
@@ -13,9 +14,27 @@ if (process.env.NODE_ENV === 'production') {
   worker.start()
 }
 
+export interface WindowType extends Window {
+  MitoInstance: BrowserClient
+}
+
+const MitoInstance = init({
+  apikey: 'abc-123',
+  dsn: '/upload',
+  maxBreadcrumbs: 100,
+  debug: true,
+  silentConsole: true,
+  enableTraceId: true,
+  includeHttpUrlTraceIdRegExp: /.*/,
+})
+
+;(window as any as WindowType).MitoInstance = MitoInstance
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MitoProvider MitoInstance={MitoInstance}>
+      <App />
+    </MitoProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

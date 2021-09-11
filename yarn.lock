@@ -1572,79 +1572,60 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@mitojs/browser@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/browser/-/browser-2.1.19.tgz#39fb910763f19c1c286d3ef0d5a9127b8d1f43f3"
-  integrity sha512-QeGZwx1qayS9S9I9TF4lY17ttHmi4KetLWPQtZFD1IS0zY1ZFllHqxDm2evwqJsbM26fZpqz/HzDamvXXJLXUg==
+"@mitojs/browser@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/browser/-/browser-2.1.22.tgz#7f3069edce4db12be72358a1e02eb9da171bea12"
+  integrity sha512-oYEG/P5Kyq0XHoYCdDBFNOs5ezDAsw1x25T34MlPmIJJk1YlTWEupjtTxdpGffC7ElNVFEjjz5VVRS63i8kUSg==
   dependencies:
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/types" "2.1.19"
-    "@mitojs/utils" "2.1.19"
+    "@mitojs/core" "2.1.22"
+    "@mitojs/shared" "2.1.22"
+    "@mitojs/types" "2.1.22"
+    "@mitojs/utils" "2.1.22"
 
-"@mitojs/core@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/core/-/core-2.1.19.tgz#fc2e7be8e0be5edabafb04438a9e15ab13992029"
-  integrity sha512-Sm552Qhr9wbckx6ma9n3I+xf9LJ0NCaU1ypMceYhN1bMa2JjXoA1SWQYDiTuF5ILnxty5zPbBxYBHOYSNkdzNA==
+"@mitojs/core@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/core/-/core-2.1.22.tgz#6ab07db9562ca9de6b5ff0792e2500233cecb467"
+  integrity sha512-ne1jFA1U6LYDNF8JbVILVrRLY4arp4Wk0ydyY3PjvWYB0PsIB8j7Vu8F6z/AdyzkSUkYXCaQwQqDhus2uxPwGQ==
   dependencies:
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/types" "2.1.19"
-    "@mitojs/utils" "2.1.19"
+    "@mitojs/core" "2.1.22"
+    "@mitojs/shared" "2.1.22"
+    "@mitojs/types" "2.1.22"
+    "@mitojs/utils" "2.1.22"
 
-"@mitojs/react@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/react/-/react-2.1.19.tgz#f9e43682445ee75f0aa9b64c1c3c534a88820ea7"
-  integrity sha512-1LxROGSFFOwQO7ifCc+UoMpl78oYEOoCVoLGXWpQJ7wLdE8iwmKJnbRnAdPEQf+XOvrYkt5Ofg17Lazma1ZRLQ==
+"@mitojs/react@^2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/react/-/react-2.1.22.tgz#c41c2f4a43ae526158094a1e5fcc398632d1776a"
+  integrity sha512-fAJRXab/AKozJRV5rkbJoA3CD31LHiR0HBbXoUhHHVIH7r6y5UqXMA8tfYaS8suIyKN6LFYHPaYADVGsKRNJMw==
   dependencies:
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/utils" "2.1.19"
+    "@mitojs/core" "2.1.22"
+    "@mitojs/shared" "2.1.22"
+    "@mitojs/utils" "2.1.22"
 
-"@mitojs/shared@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/shared/-/shared-2.1.19.tgz#737ff7d663ed243145a8dd003bd5c74fffd6172d"
-  integrity sha512-xZHvgP3vI/AlGL5wq1yFIeUP7gZq6+G0cn4fpiF0yxzWpB6GI/pwRcg85VxvOSJr/PGzFUTJdlxyQ8bu2szJig==
+"@mitojs/shared@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/shared/-/shared-2.1.22.tgz#3d991abc1d3797794ffaf064c346d13de58b5b61"
+  integrity sha512-Zsx65LI2D/r2HF2ky4EziEZYGLrkf/CdwJQ6/RnYJj8NhX2R4Q6nGZrwPBHU5v85jcCmLzg6vXa8DcJ4WdNC3A==
 
-"@mitojs/types@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/types/-/types-2.1.19.tgz#26fef6a2bfae65fc4b524997c5aa067ad5fe6b35"
-  integrity sha512-nK2c31naUjo9DEsH91hibla7eQ+TX3mgyf0Se8MuCyCKNF5AT9fP9qRppZdElvR/m8I2U++1tfYhGTDhxotX/Q==
+"@mitojs/types@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/types/-/types-2.1.22.tgz#df46edd55eec6618ff468fd8f798908154641cfb"
+  integrity sha512-/gAW9CiOLlfesD9IFNfbroKRPbN4DORyP8nd8avNPtpRaJ/BoSqdCuEOkiq6i+yB3rHzNic5wxjbcyiNYCMRaQ==
   dependencies:
-    "@mitojs/browser" "2.1.19"
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/utils" "2.1.19"
+    "@mitojs/browser" "2.1.22"
+    "@mitojs/core" "2.1.22"
+    "@mitojs/shared" "2.1.22"
+    "@mitojs/utils" "2.1.22"
     "@types/wechat-miniprogram" "^3.1.0"
 
-"@mitojs/utils@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/utils/-/utils-2.1.19.tgz#2dbf35a5c1d3cc32299594fcbb8a80fd266f9b63"
-  integrity sha512-KC7RdsqVeSIQX+1eNj3lVgjVFrt8xgXpnBJlnGT4xY4zawqxmuYFhMpQYnzG3jXwFrTjIVuSShqLl9j7kybotg==
+"@mitojs/utils@2.1.22":
+  version "2.1.22"
+  resolved "https://registry.npmjs.org/@mitojs/utils/-/utils-2.1.22.tgz#7c217597f4041e66740b0122970d1d75123eb8b3"
+  integrity sha512-xt4g02w3+38ljtui3RdQiPPaEhL6gGQ/Eyxdt1FhW/RQDLJEb5HIftKXxz2tsaKmJmLwgOV1DTsbJnQUDPTFCA==
   dependencies:
-    "@mitojs/browser" "2.1.19"
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/types" "2.1.19"
-
-"@mitojs/vue@2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/vue/-/vue-2.1.19.tgz#016788bda1d9e2f8266e7ebb13ea499a36f7b36c"
-  integrity sha512-ZLFf1ud6BFobAbcoYS90YxLg2Mv7w3Rwcw4+r9Pnn7NEnQ5e/nTjS86909T/v5/nDGIH4iQ2F1ZDk1KD/Fx3CA==
-  dependencies:
-    "@mitojs/core" "2.1.19"
-    "@mitojs/shared" "2.1.19"
-    "@mitojs/types" "2.1.19"
-    "@mitojs/utils" "2.1.19"
-
-"@mitojs/web@^2.1.19":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@mitojs/web/-/web-2.1.19.tgz#3a5179521d0dfe09c6b7163ae37f4beca66bf82b"
-  integrity sha512-zh+iLwfcGj85pavZ+6JvTaLG/esMspQGwPwkawGP4mTBlO72Zl3JyXJb/uGI4vRA02vIc+FfJikXxhixXyojjg==
-  dependencies:
-    "@mitojs/browser" "2.1.19"
-    "@mitojs/react" "2.1.19"
-    "@mitojs/vue" "2.1.19"
+    "@mitojs/browser" "2.1.22"
+    "@mitojs/core" "2.1.22"
+    "@mitojs/shared" "2.1.22"
+    "@mitojs/types" "2.1.22"
 
 "@mswjs/cookies@^0.1.6":
   version "0.1.6"
@@ -2311,7 +2292,7 @@
 
 "@types/wechat-miniprogram@^3.1.0":
   version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@types/wechat-miniprogram/-/wechat-miniprogram-3.4.0.tgz#d743d5b3c17bd531c2c178ea1fe9d92a0b23bcd0"
+  resolved "https://registry.npmjs.org/@types/wechat-miniprogram/-/wechat-miniprogram-3.4.0.tgz#d743d5b3c17bd531c2c178ea1fe9d92a0b23bcd0"
   integrity sha512-7d7KDwoV42/ANx/0C8C4ctBv1q9XnXYD4Fz0C+3ii0Tm+HRIwwDcinv8S88Ut/Y80czlI0shGpTgLFe0GbrXWQ==
 
 "@types/yargs-parser@*":

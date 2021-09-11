@@ -4,8 +4,8 @@ import SiderMenu from './SiderMenu'
 import BaseHeader from './BaseHeader'
 import routes from '../router/routes'
 import IframeBreadcurmb from './IframeBreadcurmb'
-
 const { Content } = Layout
+
 const BaseLayout = () => {
   return (
     <Layout style={{ height: '100%' }}>
