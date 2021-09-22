@@ -1572,60 +1572,60 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@mitojs/browser@2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/browser/-/browser-2.1.22.tgz#7f3069edce4db12be72358a1e02eb9da171bea12"
-  integrity sha512-oYEG/P5Kyq0XHoYCdDBFNOs5ezDAsw1x25T34MlPmIJJk1YlTWEupjtTxdpGffC7ElNVFEjjz5VVRS63i8kUSg==
+"@mitojs/browser@2.1.26", "@mitojs/browser@^2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/browser/-/browser-2.1.26.tgz#fb35fce404f084150edb5d77c5b23532ea6df6d8"
+  integrity sha512-0fdpPRUPo39rb1mQyyYZlpy9fM+U2shwVAOMG9sVPJ7UYDKRMIQ0awhUTgXCv49ZFe6GXHo6p7w9PzPge0+smA==
   dependencies:
-    "@mitojs/core" "2.1.22"
-    "@mitojs/shared" "2.1.22"
-    "@mitojs/types" "2.1.22"
-    "@mitojs/utils" "2.1.22"
+    "@mitojs/core" "2.1.26"
+    "@mitojs/shared" "2.1.26"
+    "@mitojs/types" "2.1.26"
+    "@mitojs/utils" "2.1.26"
 
-"@mitojs/core@2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/core/-/core-2.1.22.tgz#6ab07db9562ca9de6b5ff0792e2500233cecb467"
-  integrity sha512-ne1jFA1U6LYDNF8JbVILVrRLY4arp4Wk0ydyY3PjvWYB0PsIB8j7Vu8F6z/AdyzkSUkYXCaQwQqDhus2uxPwGQ==
+"@mitojs/core@2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/core/-/core-2.1.26.tgz#db8f5ebc81082151778d274cd90ec5b4d2df714f"
+  integrity sha512-CHICPHp9zsuNeGdGZBp6SSA9XCNfTurSf23ccJ47qJSvUhJTvsAH8Zxp4iim2LFYV7h/WZbRzca81AfEolRUQw==
   dependencies:
-    "@mitojs/core" "2.1.22"
-    "@mitojs/shared" "2.1.22"
-    "@mitojs/types" "2.1.22"
-    "@mitojs/utils" "2.1.22"
+    "@mitojs/core" "2.1.26"
+    "@mitojs/shared" "2.1.26"
+    "@mitojs/types" "2.1.26"
+    "@mitojs/utils" "2.1.26"
 
-"@mitojs/react@^2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/react/-/react-2.1.22.tgz#c41c2f4a43ae526158094a1e5fcc398632d1776a"
-  integrity sha512-fAJRXab/AKozJRV5rkbJoA3CD31LHiR0HBbXoUhHHVIH7r6y5UqXMA8tfYaS8suIyKN6LFYHPaYADVGsKRNJMw==
+"@mitojs/react@^2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/react/-/react-2.1.26.tgz#5c050057e159d9cc597eb193cd68571f9a2a2f46"
+  integrity sha512-NlLsC1b573vDykCT+sgihnJG/JFw5mZTnQPzs1oLmcq8whQetTUGJkxn7RNsAW6tW2O7vHThD2RfYfvHEs+LJw==
   dependencies:
-    "@mitojs/core" "2.1.22"
-    "@mitojs/shared" "2.1.22"
-    "@mitojs/utils" "2.1.22"
+    "@mitojs/core" "2.1.26"
+    "@mitojs/shared" "2.1.26"
+    "@mitojs/utils" "2.1.26"
 
-"@mitojs/shared@2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/shared/-/shared-2.1.22.tgz#3d991abc1d3797794ffaf064c346d13de58b5b61"
-  integrity sha512-Zsx65LI2D/r2HF2ky4EziEZYGLrkf/CdwJQ6/RnYJj8NhX2R4Q6nGZrwPBHU5v85jcCmLzg6vXa8DcJ4WdNC3A==
+"@mitojs/shared@2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/shared/-/shared-2.1.26.tgz#3b32b51b1387489913da879c98d1afb237c12f52"
+  integrity sha512-mv84onU3M3//yHQR9ftkti7ao51obd4wMtB0TDEx2/Ped2RXjp8lnxKco35LM6npjRGLGP1r9FdT7OV7+GsA5Q==
 
-"@mitojs/types@2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/types/-/types-2.1.22.tgz#df46edd55eec6618ff468fd8f798908154641cfb"
-  integrity sha512-/gAW9CiOLlfesD9IFNfbroKRPbN4DORyP8nd8avNPtpRaJ/BoSqdCuEOkiq6i+yB3rHzNic5wxjbcyiNYCMRaQ==
+"@mitojs/types@2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/types/-/types-2.1.26.tgz#c122e8c6191ac49ac665737c0e183ceba15338c3"
+  integrity sha512-UxAEutBlXj93Q3NZNadzzzz4hCThD45vJBMKvi0xLbe+gh0s37TrcEiFb6j8vwFUn+VNXrrNpZHwbkZwxlG33g==
   dependencies:
-    "@mitojs/browser" "2.1.22"
-    "@mitojs/core" "2.1.22"
-    "@mitojs/shared" "2.1.22"
-    "@mitojs/utils" "2.1.22"
+    "@mitojs/browser" "2.1.26"
+    "@mitojs/core" "2.1.26"
+    "@mitojs/shared" "2.1.26"
+    "@mitojs/utils" "2.1.26"
     "@types/wechat-miniprogram" "^3.1.0"
 
-"@mitojs/utils@2.1.22":
-  version "2.1.22"
-  resolved "https://registry.npmjs.org/@mitojs/utils/-/utils-2.1.22.tgz#7c217597f4041e66740b0122970d1d75123eb8b3"
-  integrity sha512-xt4g02w3+38ljtui3RdQiPPaEhL6gGQ/Eyxdt1FhW/RQDLJEb5HIftKXxz2tsaKmJmLwgOV1DTsbJnQUDPTFCA==
+"@mitojs/utils@2.1.26":
+  version "2.1.26"
+  resolved "https://registry.npmjs.org/@mitojs/utils/-/utils-2.1.26.tgz#ed14d6657bde9d82679a40f2689f7c58aea9c34e"
+  integrity sha512-DuCTJ/k2Ha2LPSjH4AS9lrrM3k5+1waGQaHP5NWd0q4ocS/1MKJPPkDGTMs2cRei39eMmJV0dquPl10G1UN6HQ==
   dependencies:
-    "@mitojs/browser" "2.1.22"
-    "@mitojs/core" "2.1.22"
-    "@mitojs/shared" "2.1.22"
-    "@mitojs/types" "2.1.22"
+    "@mitojs/browser" "2.1.26"
+    "@mitojs/core" "2.1.26"
+    "@mitojs/shared" "2.1.26"
+    "@mitojs/types" "2.1.26"
 
 "@mswjs/cookies@^0.1.6":
   version "0.1.6"

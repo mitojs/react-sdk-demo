@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 const { worker } = require('./mocks/browser')
-import { init, MitoProvider } from '@mitojs/react'
-import { BrowserClient } from '@mitojs/browser'
+import { MitoProvider } from '@mitojs/react'
+import { BrowserClient, init } from '@mitojs/browser'
 const MitoInstance = init({
   apikey: 'abc-123',
   dsn: '/upload',
