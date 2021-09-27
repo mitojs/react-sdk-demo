@@ -1,6 +1,7 @@
 import { Button, Card, Col, message, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
 import { useState } from 'react'
+
 enum RequestTypes {
   Xhr = 'Xhr',
   Fetch = 'Fetch',

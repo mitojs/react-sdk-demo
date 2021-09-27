@@ -12,9 +12,17 @@ const MitoInstance = init({
   silentConsole: true,
   enableTraceId: true,
   includeHttpUrlTraceIdRegExp: /.*/,
+  // 请求方法为get的时候添加请求头
+  beforeAppAjaxSend({ method, url }, config) {
+    if (method === 'GET') {
+      config.setRequestHeader('get-id', 'mito-get')
+    }
+  },
 })
 
 ;(window as any as WindowType).MitoInstance = MitoInstance
+MitoInstance.SDK_VERSION
+MitoInstance.SDK_NAME
 if (process.env.NODE_ENV === 'production') {
   worker.start({
     serviceWorker: {
