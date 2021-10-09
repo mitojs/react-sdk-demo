@@ -15,7 +15,7 @@ const BaseLayout = () => {
         <Content style={{ padding: '10px' }}>
           <Alert
             message='提示信息'
-            description='右侧的Breadcrumb组件会实时打印的你操作行为。控制台会打印当前收集的信息在控制台输入「MitoInstance」查看当前mito实例'
+            description='右侧的Breadcrumb组件会实时打印的你操作行为。控制台会打印当前收集的信息。在控制台输入「MitoInstance」查看当前mito实例'
             type='info'
             showIcon
           />

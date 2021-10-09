@@ -21,8 +21,6 @@ const MitoInstance = init({
 })
 
 ;(window as any as WindowType).MitoInstance = MitoInstance
-MitoInstance.SDK_VERSION
-MitoInstance.SDK_NAME
 if (process.env.NODE_ENV === 'production') {
   worker.start({
     serviceWorker: {
