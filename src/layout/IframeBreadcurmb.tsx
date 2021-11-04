@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { WindowType } from '..'
+import { MitoInstance } from '../index'
 const IframeWrapper = styled.iframe`
   width: 100%;
   height: 100%;
@@ -10,9 +10,9 @@ const IframeBreadcurmb = () => {
   const iframeRef = useRef(null)
   useEffect(() => {
     let iframe = iframeRef.current as any
-    const breadcrumb = (window as any as WindowType).MitoInstance.breadcrumb
+    const breadcrumb = MitoInstance.breadcrumb
     let lastLength = -1
-    setInterval(() => {
+    const timer = setInterval(() => {
       const length = breadcrumb.getStack().length
       if (length === lastLength) {
         return
@@ -28,6 +28,9 @@ const IframeBreadcurmb = () => {
           )
       }
     }, 1000)
+    return () => {
+      clearInterval(timer)
+    }
   }, [])
   return <IframeWrapper title='breadcrumb' ref={iframeRef} src='https://mitojs.github.io/mito-admin-demo/#/breadcrumbDemo'></IframeWrapper>
 }

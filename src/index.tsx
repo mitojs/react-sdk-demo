@@ -4,7 +4,7 @@ import App from './App'
 const { worker } = require('./mocks/browser')
 import { MitoProvider } from '@mitojs/react'
 import { BrowserClient, init } from '@mitojs/browser'
-const MitoInstance = init({
+export const MitoInstance = init({
   apikey: 'abc-123',
   dsn: '/upload',
   maxBreadcrumbs: 100,
@@ -19,8 +19,6 @@ const MitoInstance = init({
     }
   },
 })
-
-;(window as any as WindowType).MitoInstance = MitoInstance
 if (process.env.NODE_ENV === 'production') {
   worker.start({
     serviceWorker: {
