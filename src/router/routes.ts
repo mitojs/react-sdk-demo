@@ -1,5 +1,6 @@
 import PageOne from '../pages/PageOne/PageOne'
 import PageTwo from '../pages/PageTwo'
+import Topology from '../pages/Topology/Topology'
 
 const routes = [
   {
@@ -14,6 +15,13 @@ const routes = [
     component: PageTwo,
     meta: {
       title: '示例页面二',
+    },
+  },
+  {
+    path: '/page-topology',
+    component: Topology,
+    meta: {
+      title: 'topology',
     },
   },
 ]
