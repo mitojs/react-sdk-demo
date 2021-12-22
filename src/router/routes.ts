@@ -1,24 +1,24 @@
-import PageOne from '../pages/PageOne/PageOne'
-import PageTwo from '../pages/PageTwo'
+// import PageOne from '../pages/PageOne/PageOne'
+// import PageTwo from '../pages/PageTwo'
 import Topology from '../pages/Topology/Topology'
 
 const routes = [
+  // {
+  //   path: '/page-one',
+  //   component: PageOne,
+  //   meta: {
+  //     title: '示例页面一',
+  //   },
+  // },
+  // {
+  //   path: '/page-two',
+  //   component: PageTwo,
+  //   meta: {
+  //     title: '示例页面二',
+  //   },
+  // },
   {
-    path: '/page-one',
-    component: PageOne,
-    meta: {
-      title: '示例页面一',
-    },
-  },
-  {
-    path: '/page-two',
-    component: PageTwo,
-    meta: {
-      title: '示例页面二',
-    },
-  },
-  {
-    path: '/page-topology',
+    path: '/topology',
     component: Topology,
     meta: {
       title: 'topology',
