@@ -18,6 +18,9 @@ export const MitoInstance = init({
       config.setRequestHeader('get-id', 'mito-get')
     }
   },
+  beforePushBreadcrumb(breadcrumb, hind) {
+    return hind
+  },
 })
 if (process.env.NODE_ENV === 'production') {
   worker.start({

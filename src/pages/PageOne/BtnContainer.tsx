@@ -1,6 +1,7 @@
 import { Button, Card, Col, message, Row } from 'antd'
 import { useHistory } from 'react-router-dom'
 import { useState } from 'react'
+import { MitoInstance } from '../../index'
 
 enum RequestTypes {
   Xhr = 'Xhr',
@@ -81,10 +82,10 @@ export default function BtnContainer() {
     history.push('/page-two')
   }
   const onClickMitoLog = () => {
-    // log({
-    //   message: 'this is message',
-    //   tag: 'this is tag',
-    // })
+    MitoInstance.log({
+      message: 'this is message',
+      tag: 'this is tag',
+    })
   }
   const onClickRenderError = () => {
     setIsRenderError(true)
