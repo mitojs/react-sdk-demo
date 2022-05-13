@@ -1,0 +1,27 @@
+{
+  "name": "@mitojs/shared",
+  "version": "3.0.1",
+  "description": "@mitojs/shared",
+  "author": "cjinhuo",
+  "license": "MIT",
+  "main": "dist/shared.js",
+  "module": "dist/shared.esm.js",
+  "types": "dist/shared.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/mitojs/mitojs/blob/master/packages/shared/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitojs/mitojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitojs/mitojs/issues"
+  },
+  "keywords": [
+    "mitojs",
+    "sdk",
+    "monitor"
+  ],
+  "yalcSig": "620793fa566896b40e3fa27acc704a0f"
+}

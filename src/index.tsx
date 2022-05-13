@@ -4,6 +4,7 @@ import App from './App'
 const { worker } = require('./mocks/browser')
 import { MitoProvider } from '@mitojs/react'
 import { BrowserClient, init } from '@mitojs/browser'
+debugger
 export const MitoInstance = init({
   apikey: 'abc-123',
   dsn: '/upload',

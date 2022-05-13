@@ -1,0 +1,40 @@
+{
+  "name": "@mitojs/browser",
+  "version": "3.0.1",
+  "description": "A SDK For Monitoring Browser Errors",
+  "author": "cjinhuo",
+  "license": "MIT",
+  "main": "dist/browser.js",
+  "module": "dist/browser.esm.js",
+  "types": "dist/browser.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/mitojs/mitojs/blob/master/packages/browser/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitojs/mitojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitojs/mitojs/issues"
+  },
+  "keywords": [
+    "mitojs",
+    "sdk",
+    "browser",
+    "monitor"
+  ],
+  "dependencies": {
+    "@mitojs/core": "3.0.1",
+    "@mitojs/shared": "3.0.1",
+    "@mitojs/types": "3.0.1",
+    "@mitojs/utils": "3.0.1"
+  },
+  "buildOptions": {
+    "formats": [
+      "esm-bundler",
+      "cjs"
+    ]
+  },
+  "yalcSig": "f54873730a97c348c287ed69ff74ff8a"
+}

@@ -1,0 +1,29 @@
+{
+  "version": "v1",
+  "packages": {
+    "@mitojs/browser": {
+      "signature": "f54873730a97c348c287ed69ff74ff8a",
+      "file": true
+    },
+    "@mitojs/react": {
+      "signature": "22e7188b4531f755222abf3825ebf6e0",
+      "file": true
+    },
+    "@mitojs/core": {
+      "signature": "069d6fa3b3c224c15f3da7439f51e591",
+      "file": true
+    },
+    "@mitojs/types": {
+      "signature": "575d1ba67e783913d0e55a3e201bb28a",
+      "file": true
+    },
+    "@mitojs/shared": {
+      "signature": "620793fa566896b40e3fa27acc704a0f",
+      "file": true
+    },
+    "@mitojs/utils": {
+      "signature": "afb4729255cfadf5352aa2181cf394ee",
+      "file": true
+    }
+  }
+}

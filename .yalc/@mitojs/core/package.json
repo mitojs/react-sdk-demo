@@ -1,0 +1,32 @@
+{
+  "name": "@mitojs/core",
+  "version": "3.0.1",
+  "description": "@mitojs/core",
+  "author": "cjinhuo",
+  "license": "MIT",
+  "main": "dist/core.js",
+  "module": "dist/core.esm.js",
+  "types": "dist/core.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/mitojs/mitojs/blob/master/packages/core/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitojs/mitojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitojs/mitojs/issues"
+  },
+  "keywords": [
+    "mitojs",
+    "sdk",
+    "monitor"
+  ],
+  "dependencies": {
+    "@mitojs/shared": "3.0.1",
+    "@mitojs/types": "3.0.1",
+    "@mitojs/utils": "3.0.1"
+  },
+  "yalcSig": "069d6fa3b3c224c15f3da7439f51e591"
+}

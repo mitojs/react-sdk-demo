@@ -1,0 +1,31 @@
+{
+  "name": "@mitojs/utils",
+  "version": "3.0.1",
+  "description": "@mitojs/utils",
+  "author": "cjinhuo",
+  "license": "MIT",
+  "main": "dist/utils.js",
+  "module": "dist/utils.esm.js",
+  "types": "dist/utils.d.ts",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/mitojs/mitojs/blob/master/packages/utils/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mitojs/mitojs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mitojs/mitojs/issues"
+  },
+  "keywords": [
+    "mitojs",
+    "sdk",
+    "monitor"
+  ],
+  "dependencies": {
+    "@mitojs/shared": "3.0.1",
+    "@mitojs/types": "3.0.1"
+  },
+  "yalcSig": "afb4729255cfadf5352aa2181cf394ee"
+}
