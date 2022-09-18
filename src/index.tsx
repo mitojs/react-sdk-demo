@@ -4,6 +4,22 @@ import App from './App'
 const { worker } = require('./mocks/browser')
 import { MitoProvider } from '@mitojs/react'
 import { BrowserClient, init } from '@mitojs/browser'
+import { onLCP, onFID, onCLS } from './vital'
+
+onCLS(
+  (e: any) => {
+    console.log('cls', e)
+  },
+  {
+    reportAllChanges: false,
+  }
+)
+onFID((e: any) => {
+  console.log('fid', e)
+})
+onLCP((e: any) => {
+  console.log('lcp', e)
+})
 export const MitoInstance = init({
   apikey: 'abc-123',
   dsn: '/upload',
