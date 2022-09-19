@@ -5,9 +5,15 @@ const { worker } = require('./mocks/browser')
 import { MitoProvider } from '@mitojs/react'
 import { BrowserClient, init } from '@mitojs/browser'
 import { onLCP, onFID, onCLS } from './vital'
+import VConsole from 'vconsole'
 
+const vConsole = new VConsole()
 onCLS(
   (e: any) => {
+    window.fetch('http://localhost:4000/', {
+      method: 'POST',
+      body: JSON.stringify(e),
+    })
     console.log('cls', e)
   },
   {

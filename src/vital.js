@@ -491,7 +491,6 @@ var onCLS = function onCLS(onReport, opts) {
         if (sessionValue > metric.value) {
           metric.value = sessionValue
           metric.entries = sessionEntries
-          debugger
           report()
         }
       }

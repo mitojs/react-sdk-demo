@@ -97,6 +97,9 @@ export default function BtnContainer() {
       <Card>
         <Row gutter={[10, 10]}>
           <Col>
+            <a href='https://www.baidu.com'>baidu</a>
+          </Col>
+          <Col>
             <Button onClick={onClickNormalXhr}>触发正常Xhr</Button>
           </Col>
           <Col>
