@@ -68,7 +68,7 @@ export function normalizeReport(record, options) {
   let title = text(data.message || data.name) || '未知上报'
   let location = frameLocation(frame, false)
   let source = text(data.name) || '—'
-  let sourceDetail = ''
+  let sourceDetail
   let status = ''
   let duration = ''
   let isError = ['JAVASCRIPT', 'PROMISE', 'VUE', 'REACT', 'ERROR'].indexOf(type) >= 0
