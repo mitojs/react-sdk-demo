@@ -61,6 +61,12 @@ test('manual logs expose custom tags and preserve markup as plain text', () => {
   assert.equal(row.source, 'release-check')
   assert.equal(row.location, 'Mito.log')
 })
+test('Vue component summaries omit the development file suffix while retaining the payload', () => {
+  const payload = { data: { type: 'VUE', message: '组件错误', componentName: 'component <VueErrorDemo> at /project/src/VueErrorDemo.vue' } }
+  const row = normalizeReport({ payload })
+  assert.equal(row.source, 'VueErrorDemo')
+  assert.equal(row.raw, payload)
+})
 test('HTTP and status search does not match other events through protocols or breadcrumbs', () => {
   const httpRow = normalizeReport({ payload: http }, options)
   const jsRow = normalizeReport({ payload: js })

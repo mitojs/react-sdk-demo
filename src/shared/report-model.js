@@ -98,7 +98,9 @@ export function normalizeReport(record, options) {
   } else {
     if (type === 'VUE') {
       title = title.replace(/\(https?:\/\/vuejs\.org\/error-reference\/[^)]*\)$/, '')
-      source = text(data.componentName).replace(/^component\s*/i, '').replace(/^<|>$/g, '') || 'Vue'
+      const component = text(data.componentName)
+      const componentTag = component.match(/<([^>]+)>/)
+      source = componentTag ? componentTag[1] : component.replace(/^component\s*/i, '').trim() || 'Vue'
       sourceDetail = text(data.name)
       field(fields, '组件', source)
     } else {
