@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
 import { Layout, Menu } from 'antd'
 import styled from 'styled-components'
 import routes from '../router/routes'
-import { useHistory } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 const { Sider } = Layout
 const LogoWrapper = styled.div`
   font-size: 22px;
@@ -14,25 +13,18 @@ const LogoWrapper = styled.div`
   line-height: 64px;
 `
 export default function SiderMenu() {
-  const { location, push } = useHistory()
-  const [curMenu, setCurMenu] = useState<string>('')
-  useEffect(() => {
-    if (routes.some(item => item.path === location.pathname)) {
-      setCurMenu(location.pathname)
-    }
-  }, [location])
-  const handleClick = (value: { key: string }) => {
-    push(value.key)
-    setCurMenu(value.key)
-  }
+  const location = useLocation()
+  const navigate = useNavigate()
   return (
-    <Sider style={{ backgroundColor: 'white' }}>
+    <Sider className='demo-sidebar' style={{ backgroundColor: 'white' }}>
       <LogoWrapper>mitojs-react-demo</LogoWrapper>
-      <Menu onClick={handleClick} theme='light' mode='inline' selectedKeys={[curMenu]}>
-        {routes.map(item => (
-          <Menu.Item key={item.path}>{item.meta.title}</Menu.Item>
-        ))}
-      </Menu>
+      <Menu
+        onClick={({ key }) => navigate(key)}
+        theme='light'
+        mode='inline'
+        selectedKeys={[location.pathname]}
+        items={routes.map(item => ({ key: item.path, label: item.meta.title }))}
+      />
     </Sider>
   )
 }

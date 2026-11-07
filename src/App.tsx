@@ -1,13 +1,16 @@
 import './App.css'
 import BaseLayout from './layout/BaseLayout'
-import { HashRouter, Route, Switch } from 'react-router-dom'
+import { App as AntdApp, ConfigProvider } from 'antd'
+import { HashRouter } from 'react-router-dom'
 function App() {
   return (
-    <HashRouter>
-      <Switch>
-        <Route path='/' component={BaseLayout}></Route>
-      </Switch>
-    </HashRouter>
+    <ConfigProvider theme={{ token: { colorPrimary: '#1890ff', borderRadius: 2 } }}>
+      <AntdApp>
+        <HashRouter>
+          <BaseLayout />
+        </HashRouter>
+      </AntdApp>
+    </ConfigProvider>
   )
 }
 

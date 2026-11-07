@@ -1,5 +1,33 @@
-@import '~antd/dist/antd.css';
-@import '~normalize.css';
+@import 'antd/dist/reset.css';
+@import 'normalize.css';
+
+html,
+body,
 #root {
-  height: 100%;
+  min-height: 100%;
+}
+
+.demo-layout {
+  min-height: 100vh;
+}
+
+.demo-main {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .demo-layout.ant-layout.ant-layout-has-sider {
+    flex-direction: column;
+  }
+
+  .demo-layout.ant-layout.ant-layout-has-sider > .demo-main {
+    width: 100%;
+  }
+
+  .demo-sidebar {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
 }

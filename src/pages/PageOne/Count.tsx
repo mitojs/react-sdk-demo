@@ -1,8 +1,8 @@
 import { Button, Card, Col, Row } from 'antd'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
-import { animated, config, useSpring } from 'react-spring'
+import { animated, config, useSpring } from '@react-spring/web'
 const useCount = () => {
   const [count, setCount] = useState<number>(0)
   const add = () => {

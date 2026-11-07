@@ -18,3 +18,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# generated production and browser validation artifacts
+/docs
+/test-results
+/playwright-report
+/.cache

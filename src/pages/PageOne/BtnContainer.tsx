@@ -1,22 +1,23 @@
-import { Button, Card, Col, message, Row } from 'antd'
-import { useHistory } from 'react-router-dom'
+import { App, Button, Card, Col, Row } from 'antd'
+import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { MitoInstance } from '../../index'
+import { MitoInstance } from '../../mito'
 
 enum RequestTypes {
   Xhr = 'Xhr',
   Fetch = 'Fetch',
 }
-const printMessage = (status: number, responseText: string, requestType: RequestTypes) => {
-  if (status === 200) {
-    message.success(`${requestType}请求成功：${JSON.parse(responseText).data}`)
-  } else {
-    message.error(`${requestType}请求失败：${JSON.parse(responseText).data}`)
-  }
-}
 export default function BtnContainer() {
-  const history = useHistory()
+  const navigate = useNavigate()
+  const { message } = App.useApp()
   const [isRenderError, setIsRenderError] = useState(false)
+  const printMessage = (status: number, responseText: string, requestType: RequestTypes) => {
+    if (status === 200) {
+      message.success(`${requestType}请求成功：${JSON.parse(responseText).data}`)
+    } else {
+      message.error(`${requestType}请求失败：${JSON.parse(responseText).data}`)
+    }
+  }
   const onClickNormalXhr = () => {
     const xhr = new XMLHttpRequest()
     xhr.open('get', '/normal')
@@ -79,7 +80,7 @@ export default function BtnContainer() {
     obj.noObj.noField = 'no field'
   }
   const onClickPushRoute = () => {
-    history.push('/page-two')
+    navigate('/page-two')
   }
   const onClickMitoLog = () => {
     MitoInstance.log({
