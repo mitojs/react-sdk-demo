@@ -1,4 +1,5 @@
 import { init, type BrowserClient } from '@mitojs/browser'
+import { updateBreadcrumbs } from './monitoring/store'
 
 declare global {
   interface Window {
@@ -10,7 +11,6 @@ export const MitoInstance = init({
   apikey: 'abc-123',
   dsn: '/upload',
   maxBreadcrumbs: 100,
-  debug: true,
   silentConsole: true,
   enableTraceId: true,
   includeHttpUrlTraceIdRegExp: /.*/,
@@ -19,7 +19,8 @@ export const MitoInstance = init({
       config.setRequestHeader('get-id', 'mito-get')
     }
   },
-  beforePushBreadcrumb(_breadcrumb, hint) {
+  beforePushBreadcrumb(breadcrumb, hint) {
+    queueMicrotask(() => updateBreadcrumbs(breadcrumb.getStack()))
     return hint
   },
 })

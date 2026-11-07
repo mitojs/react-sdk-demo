@@ -1,33 +1,20 @@
-@import 'antd/dist/reset.css';
-@import 'normalize.css';
+@import "./shared/demo-shell.css";
+@import "./shared/report-monitor.css";
 
-html,
-body,
-#root {
-  min-height: 100%;
+.react-error-fallback {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border: 1px solid #f4d0ca;
+  border-radius: 6px;
+  background: #fff6f3;
+  color: #a14436;
+  font-size: 12px;
 }
 
-.demo-layout {
-  min-height: 100vh;
+.react-error-fallback .outline-button {
+  margin-top: 8px;
 }
 
-.demo-main {
-  min-width: 0;
-}
-
-@media (max-width: 767px) {
-  .demo-layout.ant-layout.ant-layout-has-sider {
-    flex-direction: column;
-  }
-
-  .demo-layout.ant-layout.ant-layout-has-sider > .demo-main {
-    width: 100%;
-  }
-
-  .demo-sidebar {
-    flex: 0 0 auto !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-  }
+.route-demo-button {
+  margin-top: 14px;
 }

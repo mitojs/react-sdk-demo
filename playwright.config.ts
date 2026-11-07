@@ -4,6 +4,7 @@ const externalPreview = process.env.PREVIEW_BASE_URL
 
 export default defineConfig({
   testDir: './tests',
+  testMatch: '**/*.spec.ts',
   fullyParallel: true,
   workers: process.env.CI ? 2 : 4,
   forbidOnly: !!process.env.CI,
@@ -11,7 +12,7 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
-    ['json', { outputFile: '.cache/react19-validation/results.json' }],
+    ['json', { outputFile: '.cache/report-monitor-validation/results.json' }],
   ],
   use: {
     baseURL: externalPreview || 'http://127.0.0.1:2034/react-sdk-demo/',
