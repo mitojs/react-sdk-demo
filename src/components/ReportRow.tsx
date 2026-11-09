@@ -16,7 +16,7 @@ export default function ReportRow({
       data-report-id={report.id}
       onClick={() => onSelect(report.id)}
     >
-      <span className='report-monitor__type' data-type={report.type}>
+      <span className='report-monitor__type' data-type={report.type} data-error={String(report.isError)}>
         {report.badge}
       </span>
       <span className='report-monitor__summary'>
@@ -27,7 +27,7 @@ export default function ReportRow({
         <span className='report-monitor__outcome-top'>
           {report.type !== 'HTTP' && <span className='report-monitor__source'>{report.source}</span>}
           {report.status !== '' && report.status != null && (
-            <span className='report-monitor__status' data-error={report.isError}>
+            <span className='report-monitor__status' data-error={String(report.isError)}>
               {report.status}
             </span>
           )}

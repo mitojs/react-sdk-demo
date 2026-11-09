@@ -40,6 +40,7 @@
 .report-monitor__row[aria-pressed='true']::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--rm-blue); }
 .report-monitor__type { align-self: start; justify-self: start; margin-top: 3px; border-radius: 4px; padding: 3px 6px; min-width: 45px; text-align: center; color: var(--rm-muted); background: #edf1f6; font-size: 11px; line-height: 1.4; letter-spacing: .5px; }
 .report-monitor__type[data-type='HTTP'], .report-monitor__type[data-type='JAVASCRIPT'], .report-monitor__type[data-type='REACT'] { color: #c83f3b; background: #fff0ed; }
+.report-monitor__type[data-type='HTTP'][data-error='false'] { color: #268365; background: #e9f6f1; }
 .report-monitor__type[data-type='VUE'], .report-monitor__type[data-type='PROMISE'] { color: #7650bd; background: #f4edff; }
 .report-monitor__type[data-type='LOG'] { color: #167b70; background: #e9f6f1; }
 .report-monitor__summary, .report-monitor__outcome { min-width: 0; display: flex; flex-direction: column; gap: 3px; }

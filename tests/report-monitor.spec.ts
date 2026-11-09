@@ -47,7 +47,7 @@ for (const [button, transport, source] of [
   ['正常 Fetch', 'fetch', 'Fetch'],
   ['正常 XHR', 'xhr', 'XHR'],
 ] as const) {
-  test(`successful ${source} requests are uploaded and shown in the report monitor`, async ({ page }) => {
+  test(`successful ${source} requests are uploaded and shown in the report monitor`, async ({ page }, testInfo) => {
     const [upload, response] = await Promise.all([
       page.waitForRequest(
         (request) =>
@@ -85,6 +85,17 @@ for (const [button, transport, source] of [
     await expect(row).toHaveCount(1)
     await expect(row).toContainText(source)
     await expect(row).toContainText('200')
+    await row.screenshot({ path: testInfo.outputPath('successful-http-colors.png') })
+    const colors = await row.evaluate((row) => {
+      const badge = getComputedStyle(row.querySelector('.report-monitor__type')!)
+      const status = getComputedStyle(row.querySelector('.report-monitor__status')!)
+      return { badgeForeground: badge.color, badgeBackground: badge.backgroundColor, statusForeground: status.color }
+    })
+    for (const [name, color] of Object.entries(colors)) {
+      const [red, green, blue] = color.match(/\d+/g)!.map(Number)
+      expect(green, `${name} should be green: ${color}`).toBeGreaterThan(red)
+      expect(green, `${name} should be green: ${color}`).toBeGreaterThan(blue)
+    }
     await expect(row).toContainText('本地演示请求已完成')
     await expect(row).toContainText(/\d+(?:\.\d+)?\s?ms/)
     await row.click()
@@ -131,7 +142,7 @@ test('repeated successful Fetch and XHR clicks each create an independent SDK up
 
 test('HTTP search and status filtering use only each event and retain transport and duration', async ({
   page,
-}) => {
+}, testInfo) => {
   await page.getByRole('button', { name: '手动上报', exact: true }).click()
   await expect(page.locator('.report-monitor__row')).toHaveCount(1)
   for (const name of ['异常 Fetch', '异常 XHR']) {
@@ -174,6 +185,18 @@ test('HTTP search and status filtering use only each event and retain transport 
     await expect(row).toContainText('GET /abnormal')
     await expect(row).toContainText('本地演示服务暂不可用')
     await expect(row).toContainText('500')
+    const source = await row.locator('.report-monitor__source-detail').innerText()
+    await row.screenshot({ path: testInfo.outputPath(`failed-http-${source}-colors.png`) })
+    const colors = await row.evaluate((row) => {
+      const badge = getComputedStyle(row.querySelector('.report-monitor__type')!)
+      const status = getComputedStyle(row.querySelector('.report-monitor__status')!)
+      return { badgeForeground: badge.color, badgeBackground: badge.backgroundColor, statusForeground: status.color }
+    })
+    for (const [name, color] of Object.entries(colors)) {
+      const [red, green, blue] = color.match(/\d+/g)!.map(Number)
+      expect(red, `${name} should be red: ${color}`).toBeGreaterThan(green)
+      expect(red, `${name} should be red: ${color}`).toBeGreaterThan(blue)
+    }
     await expect(row).toContainText(/\d+(?:\.\d+)?\s?ms/)
   }
   await search.fill('500')
