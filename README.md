@@ -16,6 +16,8 @@ pnpm build
 pnpm preview
 ```
 
+Normal and failed Fetch/XHR requests both appear in the report monitor with their real SDK POST payload, status, response and duration. The demo explicitly uploads successful HTTP breadcrumbs through the SDK transport; SDK error reporting remains unchanged.
+
 The demo always starts MSW before rendering, including production builds. `/normal`, `/abnormal` and `/upload` are local simulations; no reporting backend is needed. The SDK's actual upload request contains `authInfo.sdkVersion`; this comes from the installed browser/shared SDK, independently of the React adapter package version. SDK versions and their transitive packages are pinned in `pnpm-workspace.yaml`.
 
 ```sh
@@ -23,7 +25,7 @@ pnpm exec playwright install --no-shell chromium
 pnpm verify
 ```
 
-Verification runs TypeScript and desktop/mobile browser scenarios against a production build: the renderer's real React version, animated counter, route navigation/reload, Fetch/XHR, manual upload, ErrorBoundary upload/fallback/reload and viewport overflow. `pnpm test` starts its own preview on port 2034. To check an existing preview, use `PREVIEW_BASE_URL=http://localhost:2031/react-sdk-demo/ pnpm test`.
+Verification runs TypeScript and desktop/mobile browser scenarios against a production build: the renderer's real React version, animated counter, route navigation/reload, successful and failed Fetch/XHR uploads, manual upload, ErrorBoundary upload/fallback/reload and viewport overflow. `pnpm test` starts its own preview on port 2034. To check an existing preview, use `PREVIEW_BASE_URL=http://localhost:2031/react-sdk-demo/ pnpm test`.
 
 Browser reports and request payload attachments are written to ignored `playwright-report/` and `test-results/`. After updating MSW, run `pnpm mock:init` to regenerate its checked-in worker. The observer is local and makes no requests to an external monitoring site. The MSW `/upload` handler reads the actual POST JSON before adding a report to the session store; `beforePushBreadcrumb` subscribes to the SDK’s real global behavior stack.
 

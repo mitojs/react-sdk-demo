@@ -31,7 +31,7 @@ export default function BaseLayout() {
             <Icon name='info' />
             <div>
               <strong>点击左侧场景，实时查看采集结果</strong>
-              <p>异常会自动生成上报记录，日常操作会留在行为轨迹中。所有演示数据仅在当前浏览器内接收。</p>
+              <p>异常与正常请求都会生成上报记录，点击和页面跳转会留在行为轨迹中。所有演示数据仅在当前浏览器内接收。</p>
             </div>
             <span className='banner-badge'>实时采集</span>
           </div>
@@ -39,7 +39,7 @@ export default function BaseLayout() {
             <div>
               <h2>{behavior ? '每一步操作，都有迹可循。' : '试着触发一个场景'}</h2>
               <p>
-                {behavior ? '还原异常发生前的点击、请求与页面跳转。' : '选择一种异常，右侧即刻呈现完整上报。'}
+                {behavior ? '还原异常发生前的点击、请求与页面跳转。' : '选择一种请求或异常，右侧即刻呈现完整上报。'}
               </p>
             </div>
             <span className='section-count'>
