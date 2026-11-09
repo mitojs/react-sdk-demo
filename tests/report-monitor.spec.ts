@@ -140,7 +140,7 @@ test('the real SDK ErrorBoundary report is readable in the monitor and the compa
     ),
     page.getByRole('button', { name: 'React 组件异常', exact: true }).click(),
   ])
-  expect(upload.postDataJSON().authInfo.sdkVersion).toBe('4.0.0-beta.0')
+  expect(upload.postDataJSON().authInfo.sdkVersion).toBe('4.0.0')
   expect((await upload.response())?.status()).toBe(200)
   await expect(page.getByText('Oops，触发了render error', { exact: true })).toBeVisible()
   const row = page.locator('.report-monitor__row').filter({ hasText: 'is Render error' })

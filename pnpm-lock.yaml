@@ -163,23 +163,23 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@mitojs/browser': 4.0.0-beta.1
-  '@mitojs/core': 4.0.0-beta.1
-  '@mitojs/react': 4.0.0-beta.1
-  '@mitojs/shared': 4.0.0-beta.0
-  '@mitojs/types': 4.0.0-beta.1
-  '@mitojs/utils': 4.0.0-beta.1
+  '@mitojs/browser': 4.0.0
+  '@mitojs/core': 4.0.0
+  '@mitojs/react': 4.0.0
+  '@mitojs/shared': 4.0.0
+  '@mitojs/types': 4.0.0
+  '@mitojs/utils': 4.0.0
 
 importers:
 
   .:
     dependencies:
       '@mitojs/browser':
-        specifier: 4.0.0-beta.1
-        version: 4.0.0-beta.1
+        specifier: 4.0.0
+        version: 4.0.0
       '@mitojs/react':
-        specifier: 4.0.0-beta.1
-        version: 4.0.0-beta.1(react@19.3.1)
+        specifier: 4.0.0
+        version: 4.0.0(react@19.3.1)
       '@react-spring/web':
         specifier: 10.1.2
         version: 10.1.2(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
@@ -255,25 +255,25 @@ packages:
       '@types/node':
         optional: true
 
-  '@mitojs/browser@4.0.0-beta.1':
-    resolution: {integrity: sha512-DaAWKyhZBcl2385WMz6T1DzsnWi0rzSBfH+bkWiiR2qZsWIMPDC6d4Z9blAMZARbqaacxpNAzUtehzusHriuHQ==}
+  '@mitojs/browser@4.0.0':
+    resolution: {integrity: sha512-8OJgCzSEo+5ljZDe+5KzId72xhhYs3oXdb9upYJgMOukyAgKmw1Kt412+4UQzmEe1Qr+Zm5cj15aA/EAxFDYLQ==}
 
-  '@mitojs/core@4.0.0-beta.1':
-    resolution: {integrity: sha512-37XZQKPmQeW/0YVra7FTKbIZWMR36o+PGlbVar3J3vghhZ2mXzEHq/ah7pawyIYNX+uD3mrDINsQjDobXkpAjg==}
+  '@mitojs/core@4.0.0':
+    resolution: {integrity: sha512-+PHcsqljNtU5nlx9QaNNY7jvRBPG8bEHeiCOMFOhYIspcMUQO0IC9NGY8ZcMtDtHuwLv/G2gR1BLDq18/vUi9Q==}
 
-  '@mitojs/react@4.0.0-beta.1':
-    resolution: {integrity: sha512-kAIfVgi32F9AhnR4Lvb1VxSe6/6YQFlL8hkcquOshNVN1Ikf7LrmU+KTKTOqwM8At1uFoeUNPpjsQXI7tULeyQ==}
+  '@mitojs/react@4.0.0':
+    resolution: {integrity: sha512-SAqkgHsXqyJIcjsXhTLW9cmAHKvgpJmBgaYasj6k6TiB/NYXkd+lutOySpLtHp3ELOprJkQIZLunHjGtbXtZUQ==}
     peerDependencies:
       react: '>=16.8.0'
 
-  '@mitojs/shared@4.0.0-beta.0':
-    resolution: {integrity: sha512-9sEhgDcCH84jG8x8PjuolAOd2x4Exncho1ZmEQ+QhRsRYSsCZTH8ofF7nPAGYW15JL7CUEtwRQ1jk1O18BypYA==}
+  '@mitojs/shared@4.0.0':
+    resolution: {integrity: sha512-akFi1/YhPMifNCwsrMpHAZ9nuOLZufXZ20T7Z2DC8GsD1E4Omgzzw2MIUbOaB8CRCkhHW9qMVB3JS1F1cxIw0A==}
 
-  '@mitojs/types@4.0.0-beta.1':
-    resolution: {integrity: sha512-qAyauIeMapV7UvN0+6VkTuTUzXodnBqPWSQNteQcEXa5TFkAzaLtdDnQi2wsKClHPlt/kBe978D2m4Nu7RVdKA==}
+  '@mitojs/types@4.0.0':
+    resolution: {integrity: sha512-wGr2S1PElVDhjBLV11ryyaUTAbjfSP6Q8XPhLiSGDBeJG8Qq6hnXWsD7ddqVzWsLLwEQDIEbxPp/ZWfTdi90Dw==}
 
-  '@mitojs/utils@4.0.0-beta.1':
-    resolution: {integrity: sha512-JTDcv6RgfaKP+iBd6GY4FWbc6JG3EPS53u4fOxsBthQSQyGJfRE7klrrKmhH44x9VuZ4nxhTb3R4dDkw8FIsDA==}
+  '@mitojs/utils@4.0.0':
+    resolution: {integrity: sha512-wzSraMgmA1m1U5Q6Ihk93BpTQCsHuBU5mg/pg5pKQRiEe4etg0w0nOwPiDDg+lSQDqTpa7CpgRh44zZzMx/nOA==}
 
   '@msw/url@0.1.2':
     resolution: {integrity: sha512-DdeBLQxQ+ZrtmwEmaj7GQ7lbzPCgbbbyAqOz/I4ulo68hwBpfdNvQJ5bmihJUkAAKOeCmqCIG3OFZGosqFN4mA==}
@@ -981,39 +981,39 @@ snapshots:
     optionalDependencies:
       '@types/node': 24.19.2
 
-  '@mitojs/browser@4.0.0-beta.1':
+  '@mitojs/browser@4.0.0':
     dependencies:
-      '@mitojs/core': 4.0.0-beta.1
-      '@mitojs/shared': 4.0.0-beta.0
-      '@mitojs/types': 4.0.0-beta.1
-      '@mitojs/utils': 4.0.0-beta.1
+      '@mitojs/core': 4.0.0
+      '@mitojs/shared': 4.0.0
+      '@mitojs/types': 4.0.0
+      '@mitojs/utils': 4.0.0
 
-  '@mitojs/core@4.0.0-beta.1':
+  '@mitojs/core@4.0.0':
     dependencies:
-      '@mitojs/shared': 4.0.0-beta.0
-      '@mitojs/types': 4.0.0-beta.1
-      '@mitojs/utils': 4.0.0-beta.1
+      '@mitojs/shared': 4.0.0
+      '@mitojs/types': 4.0.0
+      '@mitojs/utils': 4.0.0
 
-  '@mitojs/react@4.0.0-beta.1(react@19.3.1)':
+  '@mitojs/react@4.0.0(react@19.3.1)':
     dependencies:
-      '@mitojs/core': 4.0.0-beta.1
-      '@mitojs/shared': 4.0.0-beta.0
-      '@mitojs/utils': 4.0.0-beta.1
+      '@mitojs/core': 4.0.0
+      '@mitojs/shared': 4.0.0
+      '@mitojs/utils': 4.0.0
       react: 19.3.1
 
-  '@mitojs/shared@4.0.0-beta.0': {}
+  '@mitojs/shared@4.0.0': {}
 
-  '@mitojs/types@4.0.0-beta.1':
+  '@mitojs/types@4.0.0':
     dependencies:
-      '@mitojs/core': 4.0.0-beta.1
-      '@mitojs/shared': 4.0.0-beta.0
-      '@mitojs/utils': 4.0.0-beta.1
+      '@mitojs/core': 4.0.0
+      '@mitojs/shared': 4.0.0
+      '@mitojs/utils': 4.0.0
       '@types/wechat-miniprogram': 3.4.0
 
-  '@mitojs/utils@4.0.0-beta.1':
+  '@mitojs/utils@4.0.0':
     dependencies:
-      '@mitojs/shared': 4.0.0-beta.0
-      '@mitojs/types': 4.0.0-beta.1
+      '@mitojs/shared': 4.0.0
+      '@mitojs/types': 4.0.0
 
   '@msw/url@0.1.2': {}
 

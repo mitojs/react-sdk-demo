@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@mitojs/browser": "4.0.0-beta.1",
-    "@mitojs/react": "4.0.0-beta.1",
+    "@mitojs/browser": "4.0.0",
+    "@mitojs/react": "4.0.0",
     "@react-spring/web": "10.1.2",
     "msw": "3.0.4",
     "react": "19.3.1",

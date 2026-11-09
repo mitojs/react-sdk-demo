@@ -47,7 +47,7 @@ test('React 19 renders the counter and preserves both hash routes', async ({ pag
     return Array.from(hook.renderers.values(), (renderer: any) => renderer.version)
   })
   expect(versions).toEqual(['19.3.1'])
-  expect(await page.evaluate(() => window.MitoInstance.SDK_VERSION)).toBe('4.0.0-beta.0')
+  expect(await page.evaluate(() => window.MitoInstance.SDK_VERSION)).toBe('4.0.0')
   await page.getByRole('button', { name: '增加计数', exact: true }).click()
   await expect(page.getByText('1.0', { exact: true })).toBeVisible()
   await page.getByRole('button', { name: '减少计数', exact: true }).click()
@@ -80,7 +80,7 @@ test('local MSW handlers answer real Fetch and XHR scenarios', async ({ page }) 
   }
 })
 
-test('MitoProvider reports the registry beta and ErrorBoundary keeps its fallback', async ({
+test('MitoProvider reports the registry release and ErrorBoundary keeps its fallback', async ({
   page,
 }, testInfo) => {
   const [manual] = await Promise.all([
@@ -92,7 +92,7 @@ test('MitoProvider reports the registry beta and ErrorBoundary keeps its fallbac
     ),
     page.getByRole('button', { name: '手动上报', exact: true }).click(),
   ])
-  expect(manual.postDataJSON().authInfo).toMatchObject({ sdkName: 'mitojs', sdkVersion: '4.0.0-beta.0' })
+  expect(manual.postDataJSON().authInfo).toMatchObject({ sdkName: 'mitojs', sdkVersion: '4.0.0' })
   const manualResponse = await manual.response()
   expect(manualResponse?.status()).toBe(200)
   expect(manualResponse?.fromServiceWorker()).toBe(true)
@@ -107,7 +107,7 @@ test('MitoProvider reports the registry beta and ErrorBoundary keeps its fallbac
     ),
     page.getByRole('button', { name: 'React 组件异常' }).click(),
   ])
-  expect(render.postDataJSON().authInfo.sdkVersion).toBe('4.0.0-beta.0')
+  expect(render.postDataJSON().authInfo.sdkVersion).toBe('4.0.0')
   expect(render.postDataJSON().data.message).toContain('is Render error')
   expect((await render.response())?.status()).toBe(200)
   await expect(page.getByText('Oops，触发了render error')).toBeVisible()
@@ -155,7 +155,7 @@ for (const scenario of [
       page.waitForEvent('pageerror', (error) => scenario.error.test(error.message)),
       page.getByRole('button', { name: scenario.button }).click(),
     ])
-    expect(report.postDataJSON().authInfo.sdkVersion).toBe('4.0.0-beta.0')
+    expect(report.postDataJSON().authInfo.sdkVersion).toBe('4.0.0')
     expect((await report.response())?.status()).toBe(200)
     expect(error.message).toMatch(scenario.error)
     const issues = browserIssues.get(page)!

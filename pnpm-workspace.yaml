@@ -4,19 +4,19 @@
   ],
   "allowBuilds": {},
   "overrides": {
-    "@mitojs/browser": "4.0.0-beta.1",
-    "@mitojs/core": "4.0.0-beta.1",
-    "@mitojs/react": "4.0.0-beta.1",
-    "@mitojs/shared": "4.0.0-beta.0",
-    "@mitojs/types": "4.0.0-beta.1",
-    "@mitojs/utils": "4.0.0-beta.1"
+    "@mitojs/browser": "4.0.0",
+    "@mitojs/core": "4.0.0",
+    "@mitojs/react": "4.0.0",
+    "@mitojs/shared": "4.0.0",
+    "@mitojs/types": "4.0.0",
+    "@mitojs/utils": "4.0.0"
   },
   "minimumReleaseAgeExclude": [
-    "@mitojs/browser@4.0.0-beta.1",
-    "@mitojs/core@4.0.0-beta.1",
-    "@mitojs/react@4.0.0-beta.1",
-    "@mitojs/shared@4.0.0-beta.0",
-    "@mitojs/types@4.0.0-beta.1",
-    "@mitojs/utils@4.0.0-beta.1"
+    "@mitojs/browser@4.0.0",
+    "@mitojs/core@4.0.0",
+    "@mitojs/react@4.0.0",
+    "@mitojs/shared@4.0.0",
+    "@mitojs/types@4.0.0",
+    "@mitojs/utils@4.0.0"
   ]
 }
