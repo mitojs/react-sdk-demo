@@ -1,5 +1,20 @@
-@import '~antd/dist/antd.css';
-@import '~normalize.css';
-#root {
-  height: 100%;
+@import "./shared/demo-shell.css";
+@import "./shared/report-monitor.css";
+
+.react-error-fallback {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border: 1px solid #f4d0ca;
+  border-radius: 6px;
+  background: #fff6f3;
+  color: #a14436;
+  font-size: 12px;
+}
+
+.react-error-fallback .outline-button {
+  margin-top: 8px;
+}
+
+.route-demo-button {
+  margin-top: 14px;
 }

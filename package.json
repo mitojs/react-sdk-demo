@@ -3,59 +3,41 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@datadog/browser-rum": "^3.6.13",
-    "@mitojs/browser": "^3.0.0",
-    "@mitojs/react": "^3.0.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "antd": "^4.16.12",
-    "husky": "^7.0.4",
-    "normalize.css": "^8.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-spring": "^9.2.4",
-    "styled-components": "^5.3.0",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "@mitojs/browser": "4.0.0",
+    "@mitojs/react": "4.0.0",
+    "@react-spring/web": "10.1.2",
+    "msw": "3.0.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-router-dom": "7.18.5"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "rm -rf docs && react-scripts build && mv build docs",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepare": "husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "pnpm test:model && pnpm build && pnpm test:e2e",
+    "verify": "pnpm typecheck && pnpm test:model && pnpm build && pnpm test:e2e",
+    "mock:init": "msw init public --save",
+    "test:e2e": "playwright test",
+    "test:model": "node --test tests/report-model.test.mjs"
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.1.8",
-    "@types/styled-components": "^5.1.12",
-    "msw": "^0.34.0"
+    "@playwright/test": "1.65.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.6"
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "packageManager": "pnpm@12.16.1",
+  "type": "module",
+  "engines": {
+    "node": "^24.15.0",
+    "pnpm": ">=12"
   }
 }

@@ -1,38 +1,42 @@
-import { useEffect, useState } from 'react'
-import { Layout, Menu } from 'antd'
-import styled from 'styled-components'
-import routes from '../router/routes'
-import { useHistory } from 'react-router-dom'
-const { Sider } = Layout
-const LogoWrapper = styled.div`
-  font-size: 22px;
-  width: 100%;
-  height: 64px;
-  background-color: #1890ff;
-  color: white;
-  text-align: center;
-  line-height: 64px;
-`
+import { useLocation, useNavigate } from 'react-router-dom'
+import Icon from '../components/Icon'
+
 export default function SiderMenu() {
-  const { location, push } = useHistory()
-  const [curMenu, setCurMenu] = useState<string>('')
-  useEffect(() => {
-    if (routes.some(item => item.path === location.pathname)) {
-      setCurMenu(location.pathname)
-    }
-  }, [location])
-  const handleClick = (value: { key: string }) => {
-    push(value.key)
-    setCurMenu(value.key)
-  }
+  const { pathname } = useLocation()
+  const navigate = useNavigate()
   return (
-    <Sider style={{ backgroundColor: 'white' }}>
-      <LogoWrapper>mitojs-react-demo</LogoWrapper>
-      <Menu onClick={handleClick} theme='light' mode='inline' selectedKeys={[curMenu]}>
-        {routes.map(item => (
-          <Menu.Item key={item.path}>{item.meta.title}</Menu.Item>
-        ))}
-      </Menu>
-    </Sider>
+    <aside className='sidebar'>
+      <a className='brand' href='#/page-one' aria-label='MitoJS 首页'>
+        <span className='brand-symbol'>m</span>
+        <span>
+          mito<span className='brand-light'>js</span>
+        </span>
+      </a>
+      <div className='sidebar-content'>
+        <p className='nav-caption'>SDK PLAYGROUND</p>
+        <nav aria-label='演示导航'>
+          {[
+            { path: '/page-one', title: '异常演示', icon: 'grid' },
+            { path: '/page-two', title: '行为轨迹', icon: 'activity' },
+          ].map((item) => (
+            <button
+              key={item.path}
+              className={`nav-item ${pathname === item.path ? 'active' : ''}`}
+              aria-current={pathname === item.path ? 'page' : undefined}
+              onClick={() => navigate(item.path)}
+            >
+              <Icon name={item.icon} />
+              <span>{item.title}</span>
+              <Icon name='arrow' className='nav-arrow' />
+            </button>
+          ))}
+        </nav>
+        <div className='sidebar-footer'>
+          <span className='vue-dot' />
+          <span>React 19 集成示例</span>
+          <p>让前端问题，有迹可循。</p>
+        </div>
+      </div>
+    </aside>
   )
 }
