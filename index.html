@@ -1,17 +1,36 @@
 <!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="%BASE_URL%favicon.ico" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#1890ff" />
-    <meta name="description" content="Experience MitoJS browser reporting and ErrorBoundary with React 19" />
+    <link rel="icon" href="%BASE_URL%favicon.ico" />
     <link rel="manifest" href="%BASE_URL%manifest.json" />
-    <title>mito-sdk-demo</title>
+    <title>MitoJS · React 19 错误监控与 ErrorBoundary 演示</title>
+    <meta name="description" content="体验 MitoJS 在 React 19 中采集 ErrorBoundary 组件异常、Fetch 和 XHR 请求。触发示例后，可在浏览器中查看 SDK 上报详情和用户行为轨迹。" />
+    <link rel="canonical" href="https://mitojs.github.io/react-sdk-demo/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content="https://mitojs.github.io/react-sdk-demo/" />
+    <meta property="og:title" content="MitoJS · React 19 错误监控与 ErrorBoundary 演示" />
+    <meta property="og:description" content="体验 MitoJS 在 React 19 中采集 ErrorBoundary 组件异常、Fetch 和 XHR 请求。触发示例后，可在浏览器中查看 SDK 上报详情和用户行为轨迹。" />
+    <meta property="og:image" content="https://mitojs.github.io/react-sdk-demo/demo-preview.png" />
+    <meta property="og:image:alt" content="React 19演示界面" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MitoJS · React 19 错误监控与 ErrorBoundary 演示" />
+    <meta name="twitter:description" content="体验 MitoJS 在 React 19 中采集 ErrorBoundary 组件异常、Fetch 和 XHR 请求。触发示例后，可在浏览器中查看 SDK 上报详情和用户行为轨迹。" />
+    <meta name="twitter:image" content="https://mitojs.github.io/react-sdk-demo/demo-preview.png" />
+    <meta name="twitter:image:alt" content="React 19演示界面" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>MitoJS React 19 错误监控与 ErrorBoundary 演示</h1>
+        <p>体验 MitoJS 在 React 19 中采集 ErrorBoundary 组件异常、Fetch 和 XHR 请求。触发示例后，可在浏览器中查看 SDK 上报详情和用户行为轨迹。</p>
+        <p>触发组件异常，观察 ErrorBoundary 如何显示备用界面，再查看对应的上报记录。</p>
+        <nav aria-label="其他框架演示"><a href="https://mitojs.github.io/vue2-sdk-demo/">Vue 2 SDK 演示</a> · <a href="https://mitojs.github.io/vue3-sdk-demo/">Vue 3 SDK 演示</a></nav>
+      </main>
+    </div>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

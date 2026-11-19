@@ -63,7 +63,7 @@ export default function BaseLayout() {
             <ReportMonitor behavior={behavior} />
           </div>
           <footer className='page-footer'>
-            <span>MitoJS · 让前端问题，有迹可循。</span>
+            <nav aria-label='其他框架演示'><a href='https://mitojs.github.io/vue2-sdk-demo/'>Vue 2 SDK 演示</a>{' · '}<a href='https://mitojs.github.io/vue3-sdk-demo/'>Vue 3 SDK 演示</a></nav>
             <a href='https://github.com/mitojs/mitojs' target='_blank' rel='noreferrer'>
               探索 MitoJS
               <Icon name='link' />
