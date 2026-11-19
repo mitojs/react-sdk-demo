@@ -212,9 +212,10 @@ test('HTTP search and status filtering use only each event and retain transport 
 test('selection stays on the chosen report while live reports arrive and breadcrumbs stay local', async ({
   page,
 }) => {
+  const demoOrigin = new URL(page.url()).origin
   const external: string[] = []
   page.on('request', (request) => {
-    if (!['localhost', '127.0.0.1'].includes(new URL(request.url()).hostname)) external.push(request.url())
+    if (new URL(request.url()).origin !== demoOrigin) external.push(request.url())
   })
   await page.getByRole('button', { name: '手动上报', exact: true }).click()
   const logRow = page
