@@ -21,6 +21,13 @@
     <meta name="twitter:description" content="体验 MitoJS 在 React 19 中采集 ErrorBoundary 组件异常、Fetch 和 XHR 请求。触发示例后，可在浏览器中查看 SDK 上报详情和用户行为轨迹。" />
     <meta name="twitter:image" content="https://mitojs.github.io/react-sdk-demo/demo-preview.png" />
     <meta name="twitter:image:alt" content="React 19演示界面" />
+    <style>
+      .demo-recipe { box-sizing: border-box; width: min(calc(100% - 32px), 48rem); margin: 2rem auto; padding: 1rem 1.25rem; background: #fff; color: #263445; border: 1px solid #dce5ef; border-radius: .75rem; }
+      .demo-recipe p { margin: .75rem 0; }
+      .demo-recipe pre { overflow: auto; padding: .75rem; background: #f3f5f8; border-radius: .4rem; }
+      .demo-recipe a { color: #0755a5; text-decoration: underline; }
+      @media (min-width: 960px) { .demo-recipe { width: min(calc(100% - 250px), 48rem); margin-left: max(224px, calc(50% - 24rem + 104px)); } }
+    </style>
   </head>
   <body>
     <div id="root">
@@ -31,6 +38,22 @@
         <nav aria-label="其他框架演示"><a href="https://mitojs.github.io/vue2-sdk-demo/">Vue 2 SDK 演示</a> · <a href="https://mitojs.github.io/vue3-sdk-demo/">Vue 3 SDK 演示</a></nav>
       </main>
     </div>
+    <section class="demo-recipe" aria-labelledby="sdk-quickstart">
+      <h2 id="sdk-quickstart">React 19 错误监控：接入与验证</h2>
+      <p>点击「React 组件异常」可看到 ErrorBoundary 的降级界面和异常报告。ErrorBoundary 捕获子树渲染异常；普通 Fetch/XHR 由浏览器 SDK 独立采集。</p>
+      <pre><code>npm install @mitojs/browser@4.0.0 @mitojs/react@4.0.0</code></pre>
+      <pre><code>import { init } from &#x27;@mitojs/browser&#x27;
+import { ErrorBoundary, MitoProvider } from &#x27;@mitojs/react&#x27;
+
+const MitoInstance = init({ dsn: &#x27;/reports&#x27; })
+
+// 在渲染入口包裹要保护的子树：
+&lt;MitoProvider MitoInstance={MitoInstance}&gt;
+  &lt;ErrorBoundary fallback={&lt;p&gt;此组件暂时不可用&lt;/p&gt;}&gt;&lt;App /&gt;&lt;/ErrorBoundary&gt;
+&lt;/MitoProvider&gt;</code></pre>
+      <p><code>/reports</code> 是示例接收地址，接入项目时请替换为自己的监控接收端。本 Demo 的请求和上报在浏览器本地拦截，观察窗展示 SDK 实际生成的报告。</p>
+      <p><a href="https://mitojs.github.io/mito-doc/zh-CN/sdk/guide/react/">React 19 接入文档</a> · <a href="https://mitojs.github.io/mito-doc/zh-CN/sdk/guide/quickstart-v4/">运行 v4 本地接收端</a> · <a href="https://github.com/mitojs/react-sdk-demo">示例源码</a></p>
+    </section>
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
